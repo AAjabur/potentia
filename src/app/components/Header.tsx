@@ -45,7 +45,7 @@ export default function Header(){
           <div className="horizontal-container" style={navContactContainer}>
             <a> Entre em Contato </a>
             <VerticalBar height={40} style={navVerticalBarStyle}/>
-            <Button width={120} height={40}/>
+            <Button width={120} height={40} text="Participe"/>
           </div>
         </div>
       </header>
