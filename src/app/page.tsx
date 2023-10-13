@@ -2,6 +2,7 @@ import Logo from "./components/Logo";
 import Image from "next/image";
 import Button from "./components/Button";
 import VerticalBar from "./components/VerticalBar";
+import Arrow from "./components/Arrow";
 import { Concert_One, Hammersmith_One } from 'next/font/google'
 
 const concert_one = Concert_One({
@@ -118,6 +119,68 @@ function SecondContentBlock() {
   )
 }
 
+function Footer() {
+  const footerStyle: React.CSSProperties = {
+    background: "linear-gradient(0deg, rgba(2, 2, 6, 0.00) 0.79%, #1A0B45 104.24%)",
+    justifyContent: "space-between",
+    padding: "4px 0"
+  };
+
+  const contentContainerStyle: React.CSSProperties = {
+    width: "70%",
+    justifyContent: "space-around"
+  };
+
+  const linksContainerStyle: React.CSSProperties = {
+    width: "40%",
+    justifyContent: "space-between"
+  };
+
+  const emailInputContainer: React.CSSProperties = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "relative",
+    width: "140px",
+    height: "40px",
+    background: "rgba(0, 0, 0, 0.32)",
+    borderRadius: "20px",
+  };
+
+  const arrowContainerStyle: React.CSSProperties = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "absolute",
+    width: "48px",
+    height: "100%",
+    right: "-4px",
+    background: "linear-gradient(90deg, #AD00FF 0%, rgba(0, 163, 255, 0.65) 155.65%)",
+    borderRadius: "20px"
+  };
+
+  return (
+    <footer className="horizontal-container" style={footerStyle}>
+      <div>
+        <Logo/>
+      </div>
+      <div className="horizontal-container" style={contentContainerStyle}>
+        <div className="horizontal-container" style={linksContainerStyle}>
+          <p>Termos de Serviço</p>
+          <p>WhatsApp</p>
+          <p>Instagram</p>
+        </div>
+        <div style={emailInputContainer}>
+          <div style={arrowContainerStyle}>
+            <Arrow width={16} height={16}/>
+          </div>
+          <p>Email</p>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
 export default function Home() {
   return (
     <main>
@@ -127,21 +190,7 @@ export default function Home() {
           <SecondContentBlock/>
         </div>
       </main>
-      <footer>
-        <div>
-          <div>
-          <Logo/>
-            <h2>POTENT IA</h2>
-          </div>
-          <div>
-            <p>Termos de Serviço</p>
-            <p>WhatsApp</p>
-            <p>Instagram</p>
-          </div>
-          <div></div>
-        </div>
-      </footer>
-      
+      <Footer/>
     </main>
   )
 }
