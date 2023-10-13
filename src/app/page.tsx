@@ -1,6 +1,7 @@
 import Logo from "./components/Logo";
 import Image from "next/image";
 import Button from "./components/Button";
+import VerticalBar from "./components/VerticalBar";
 import { Concert_One, Hammersmith_One } from 'next/font/google'
 
 const concert_one = Concert_One({
@@ -15,7 +16,9 @@ const hammersmith_one = Hammersmith_One({
 
 function FirstContentBlock() {
   const contentContainerStyle: React.CSSProperties = {
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    background: "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0.79%, #000 104.24%)",
+    minHeight: "calc(100vh - 80px)"
   }
 
   const textContainerStyle: React.CSSProperties = {
@@ -61,28 +64,67 @@ function FirstContentBlock() {
   )
 }
 
+function SecondContentBlock() {
+  const contentContainerStyle: React.CSSProperties = {
+    justifyContent: "center",
+    alignItems: "start",
+    paddingTop: "80px",
+    width: "100%",
+    background: "linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0.79%, #000 104.24%)"
+  };
+
+  const textBlockStyle: React.CSSProperties = {
+    width: "400px",
+    alignItems: "center",
+    textAlign: "center"
+  };
+
+  const primaryTextStyle: React.CSSProperties = {
+    background: "linear-gradient(90deg, #AD00FF 31.63%, #00A3FF 71.19%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    fontSize: "28px",
+    paddingBottom: "24px"
+  };
+
+  const secondaryTextStyle: React.CSSProperties = {
+    padding: "0 62px",
+    fontSize: "24px",
+    fontWeight: "500"
+  };
+
+  const verticalBarStyle: React.CSSProperties = {
+    background: "#137A90",
+  };
+
+  return (
+    <div className="horizontal-container" style={contentContainerStyle}>
+      <div style={textBlockStyle}>
+        <h2 style={primaryTextStyle}>Missão</h2>
+        <p style={secondaryTextStyle}> Capacitar indivíduos para que compreendam e aproveitem o poder da IA, transformando-a em uma ferramenta para viver melhor. </p>
+      </div>
+      <VerticalBar height={280} style={verticalBarStyle}/>
+      <div style={textBlockStyle}>
+        <h2 style={primaryTextStyle}>Visão</h2>
+        <p style={secondaryTextStyle}> Ser reconhecida globalmente como a principal plataforma focada em IA, ajudando milhões de pessoas a melhorar suas vidas através da tecnologia. </p>
+      </div>
+      <VerticalBar height={280} style={verticalBarStyle}/>
+      <div style={textBlockStyle}>
+        <h2 style={primaryTextStyle}>Valor</h2>
+        <p style={secondaryTextStyle}> Compromisso genuíno com cada consumidor, inovação constante, integridade e foco na melhoria contínua da qualidade de vida através da IA. </p>
+      </div>
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <main>
       <main>
         <div>
           <FirstContentBlock/>
-          <div>
-            <div>
-              <h2>Missão</h2>
-              <p></p>
-            </div>
-            <div></div>
-            <div>
-              <h2>Visão</h2>
-              <p></p>
-            </div>
-            <div></div>
-            <div>
-              <h2>Valor</h2>
-              <p></p>
-            </div>
-          </div>
+          <SecondContentBlock/>
         </div>
       </main>
       <footer>

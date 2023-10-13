@@ -9,7 +9,8 @@ export default function Header(){
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-between",
-      padding: "10px 0"
+      padding: "10px 0",
+      background: "linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%)",
     }
 
     const navContainerStyle: React.CSSProperties = {

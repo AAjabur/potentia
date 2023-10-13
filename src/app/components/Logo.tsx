@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { text } from "stream/consumers";
 
 export default function Logo(){
   const textStyle: React.CSSProperties = {

@@ -8,7 +8,7 @@ interface VerticalBarProps {
 
 export default function VerticalBar({ height, style }: VerticalBarProps) : JSX.Element{
     const barStyle: React.CSSProperties = {
-        width: "2px",
+        width: "1px",
         height: `${height}px`,
         backgroundColor: "black",
         ...style,
