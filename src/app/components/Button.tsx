@@ -22,7 +22,7 @@ export default function Button({ width, height, text, style }: ButtonProps ) : J
         color: "#FFF",
         fontWeight: "500",
         padding: `4px ${Math.round(width / 8)}px`,
-        ...style
+        ...style,
     }
 
 
