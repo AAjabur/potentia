@@ -67,8 +67,8 @@ function FirstContentBlock() {
 function SecondContentBlock() {
   const contentContainerStyle: React.CSSProperties = {
     justifyContent: "center",
-    alignItems: "start",
-    paddingTop: "80px",
+    alignItems: "center",
+    height: "50vw",
     width: "100%",
     background: "linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0.79%, #000 104.24%)"
   };
