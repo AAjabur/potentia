@@ -95,7 +95,7 @@ function SecondContentBlock() {
   };
 
   const verticalBarStyle: React.CSSProperties = {
-    background: "#137A90",
+    background: "#0b4c5a",
   };
 
   return (
