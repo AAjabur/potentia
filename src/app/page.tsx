@@ -4,6 +4,7 @@ import Button from "./components/Button";
 import VerticalBar from "./components/VerticalBar";
 import Arrow from "./components/Arrow";
 import { Concert_One, Hammersmith_One } from 'next/font/google'
+import Header from "./components/Header";
 
 const concert_one = Concert_One({
     subsets: ['latin'],
@@ -184,6 +185,7 @@ function Footer() {
 export default function Home() {
   return (
     <main>
+      <Header/>
       <main>
         <div>
           <FirstContentBlock/>

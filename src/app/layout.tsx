@@ -1,6 +1,5 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import Header from "./components/Header"
 import { Akshar } from 'next/font/google'
 
 const akshar = Akshar({
@@ -21,7 +20,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={akshar.className}>
-        <Header/>
         {children}
       </body>
     </html>
