@@ -2,9 +2,10 @@ import Logo from "./components/Logo";
 import Image from "next/image";
 import Button from "./components/Button";
 import VerticalBar from "./components/VerticalBar";
-import Arrow from "./components/Arrow";
 import { Concert_One, Hammersmith_One } from 'next/font/google'
 import Header from "./components/Header";
+import EmailInput from "./components/emailInput/EmailInput";
+
 
 const concert_one = Concert_One({
     subsets: ['latin'],
@@ -137,29 +138,6 @@ function Footer() {
     justifyContent: "space-between"
   };
 
-  const emailInputContainer: React.CSSProperties = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative",
-    width: "140px",
-    height: "40px",
-    background: "rgba(0, 0, 0, 0.32)",
-    borderRadius: "20px",
-  };
-
-  const arrowContainerStyle: React.CSSProperties = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "absolute",
-    width: "48px",
-    height: "100%",
-    right: "-4px",
-    background: "linear-gradient(90deg, #AD00FF 0%, rgba(0, 163, 255, 0.65) 155.65%)",
-    borderRadius: "20px"
-  };
-
   return (
     <footer className="horizontal-container" style={footerStyle}>
       <div>
@@ -167,16 +145,11 @@ function Footer() {
       </div>
       <div className="horizontal-container" style={contentContainerStyle}>
         <div className="horizontal-container" style={linksContainerStyle}>
-          <p>Termos de Serviço</p>
-          <p>WhatsApp</p>
-          <p>Instagram</p>
+          <a>Termos de Serviço</a>
+          <a>WhatsApp</a>
+          <a>Instagram</a>
         </div>
-        <div style={emailInputContainer}>
-          <div style={arrowContainerStyle}>
-            <Arrow width={16} height={16}/>
-          </div>
-          <p>Email</p>
-        </div>
+        <EmailInput/>
       </div>
     </footer>
   )

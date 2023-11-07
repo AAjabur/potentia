@@ -1,0 +1,9 @@
+.container {
+    width: 150px;
+    transition: width 0.5s ease-in-out;
+}
+  
+.container-clicked {
+    width: 300px;
+}
+  
